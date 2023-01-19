@@ -1,5 +1,6 @@
 import{_ as s,W as i,X as d,Y as n,a0 as e,Z as r,$ as l,a1 as t,y as c}from"./framework.00b47ed6.js";const o={},v=n("h1",{id:"反向代理",tabindex:"-1"},[n("a",{class:"header-anchor",href:"#反向代理","aria-hidden":"true"},"#"),e(" 反向代理")],-1),u=t(`<h2 id="nginx" tabindex="-1"><a class="header-anchor" href="#nginx" aria-hidden="true">#</a> nginx</h2><p>在网站配置文件的 server 字段中添加</p><div class="language-conf line-numbers-mode" data-ext="conf"><pre class="language-conf"><code>location / {
   proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_set_header X-Forwarded-Proto $scheme;
   proxy_set_header Host $http_host;
   proxy_set_header X-Real-IP $remote_addr;
   proxy_set_header Range $http_range;
@@ -9,7 +10,7 @@ import{_ as s,W as i,X as d,Y as n,a0 as e,Z as r,$ as l,a1 as t,y as c}from"./f
   # the max size of file to upload
   client_max_body_size 20000m;
 }
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="custom-container warning"><p class="custom-container-title">注意</p><p>如果使用宝塔面板，请务必删除以下默认配置</p><div class="language-conf line-numbers-mode" data-ext="conf"><pre class="language-conf"><code>- location ~ ^/(\\.user.ini|\\.htaccess|\\.git|\\.svn|\\.project|LICENSE|README.md
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="custom-container warning"><p class="custom-container-title">注意</p><p>如果使用宝塔面板，请务必删除以下默认配置</p><div class="language-conf line-numbers-mode" data-ext="conf"><pre class="language-conf"><code>- location ~ ^/(\\.user.ini|\\.htaccess|\\.git|\\.svn|\\.project|LICENSE|README.md
 - location ~ .\\*\\.(gif|jpg|jpeg|png|bmp|swf)$
 - location ~ .\\*\\.(js|css)?$
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div><h2 id="apache" tabindex="-1"><a class="header-anchor" href="#apache" aria-hidden="true">#</a> Apache</h2><p>在 VirtualHost 字段下添加配置项 ProxyPass，如：</p><div class="language-xml line-numbers-mode" data-ext="xml"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>VirtualHost</span> <span class="token attr-name"><span class="token namespace">*:</span>80</span><span class="token punctuation">&gt;</span></span>
@@ -28,4 +29,4 @@ import{_ as s,W as i,X as d,Y as n,a0 as e,Z as r,$ as l,a1 as t,y as c}from"./f
 }
 
 将 \`example.com\` 替换为你自己解析后的域名。
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,12);function p(m,h){const a=c("RouterLink");return i(),d("div",null,[v,n("p",null,[e("程序默认监听 5244 端口。如有修改，请一并修改下列配置中的端口号。如果你使用反向代理，建议你设置"),r(a,{to:"/zh/config/configuration.html#site_url"},{default:l(()=>[e("site_url")]),_:1}),e("，以帮助alist更好的工作。")]),u])}const x=s(o,[["render",p],["__file","reverse-proxy.html.vue"]]);export{x as default};
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,12);function p(m,h){const a=c("RouterLink");return i(),d("div",null,[v,n("p",null,[e("程序默认监听 5244 端口。如有修改，请一并修改下列配置中的端口号。如果你使用反向代理，建议你设置"),r(a,{to:"/zh/config/configuration.html#site_url"},{default:l(()=>[e("site_url")]),_:1}),e("，以帮助alist更好的工作。")]),u])}const b=s(o,[["render",p],["__file","reverse-proxy.html.vue"]]);export{b as default};
