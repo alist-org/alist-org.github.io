@@ -1,7 +1,10 @@
 // function called if wwads is blocked
 function ABDetected() {
-  document.getElementsByClassName("wwads")[0].classList.remove("wwads-cn");
-  document.getElementsByClassName("wwads")[0].insertAdjacentHTML(
+  const wwads = document.getElementsByClassName("wwads");
+  if (wwads.length === 0) return;
+  if (!wwads[0].classList.contains("wwads-cn")) return;
+  wwads[0].classList.remove("wwads-cn");
+  wwads[0].insertAdjacentHTML(
     "beforeend",
     `<style>
 .wwads-horizontal,.wwads-vertical{padding:5px;min-height:120px;margin-top:20px;box-sizing:border-box;border-radius:3px;font-family:sans-serif;display:flex;min-width:150px;position:relative;overflow:hidden;}
@@ -43,7 +46,7 @@ function docReady(t) {
 
 //check if wwads' fire function was blocked after document is ready with 3s timeout (waiting the ad loading)
 docReady(function () {
-  setTimeout(function () {
+  setInterval(function () {
     if (window._AdBlockInit === undefined) {
       ABDetected();
     }
