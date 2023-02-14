@@ -1,6 +1,7 @@
 // function called if wwads is blocked
 function ABDetected() {
-  document.getElementsByClassName("wwads-cn")[0].insertAdjacentHTML(
+  document.getElementsByClassName("wwads")[0].classList.remove("wwads-cn");
+  document.getElementsByClassName("wwads")[0].insertAdjacentHTML(
     "beforeend",
     `<style>
 .wwads-horizontal,.wwads-vertical{padding:5px;min-height:120px;margin-top:20px;box-sizing:border-box;border-radius:3px;font-family:sans-serif;display:flex;min-width:150px;position:relative;overflow:hidden;}
