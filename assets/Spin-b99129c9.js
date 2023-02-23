@@ -1,4 +1,4 @@
-import{c as b,h as d,j as o,T as z}from"./framework-939b1f57.js";import{d as m,c as l,b as u,u as S,e as f,h as C,m as x,s as k,l as $}from"./app-8d47a33c.js";import{f as w,p as T}from"./Space-54b423dd.js";import{u as R}from"./use-compitable-6687ce15.js";const B=m([m("@keyframes spin-rotate",`
+import{c as b,h as d,j as o,T as z}from"./framework-939b1f57.js";import{d as m,c as l,b as u,u as S,e as f,h as C,m as x,s as k,l as $}from"./app-0d2d4fa3.js";import{f as w,p as T}from"./Space-e06f6b1e.js";import{u as R}from"./use-compitable-6687ce15.js";const B=m([m("@keyframes spin-rotate",`
  from {
  transform: rotate(0);
  }
