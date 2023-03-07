@@ -1,4 +1,4 @@
-import{d as n,b as h,l as Y,e as d,m as s,n as Z,o as ee,u as w,h as x,q as oe,k as T,r as re,s as te,j as u,v as ne,w as de,t as ae}from"./app-4577b49e.js";import{r as m,c as se}from"./browser-e00fcf81.js";import{c as B,h as p,j as l}from"./framework-ffef1a40.js";const le=n([h("card",`
+import{d as n,b as h,l as Y,e as d,m as s,n as Z,o as ee,u as w,h as x,q as oe,k as T,r as re,s as te,j as u,v as ne,w as de,t as ae}from"./app-e778b3af.js";import{r as m,c as se}from"./browser-23910de7.js";import{c as B,h as p,j as l}from"./framework-ffef1a40.js";const le=n([h("card",`
  font-size: var(--n-font-size);
  line-height: var(--n-line-height);
  display: flex;
